@@ -1,6 +1,6 @@
 # pico_pixels
 Pico SDK C library to interface with WS2812
-Based on (WS2812 example)[https://github.com/raspberrypi/pico-examples/tree/master/pio/ws2812]
+Based on [WS2812 example](https://github.com/raspberrypi/pico-examples/tree/master/pio/ws2812)
 
 To add this library to your Pico SDK project, clone this library anywhere into your project directory.
 In `CMakeLists.txt` of your project add the library path as a subdirectory, for example:
