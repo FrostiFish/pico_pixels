@@ -30,35 +30,35 @@ if (EXISTS ${USERHOME}/.pico-sdk/examples/pico_sdk_import.cmake)
     include(${USERHOME}/.pico-sdk/examples/pico_sdk_import.cmake)
 endif()
 
-project(pico-pixels-example C CXX ASM)
+project(pico_pixels_example C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(pico-pixels-example pico_pixels_example.c )
+add_executable(pico_pixels_example pico_pixels_example.c )
 
-pico_set_program_name(pico-pixels-example "pico-pixels-example")
-pico_set_program_version(pico-pixels-example "0.1")
+pico_set_program_name(pico_pixels_example "pico_pixels_example")
+pico_set_program_version(pico_pixels_example "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(pico-pixels-example 0)
-pico_enable_stdio_usb(pico-pixels-example 1)
+pico_enable_stdio_uart(pico_pixels_example 0)
+pico_enable_stdio_usb(pico_pixels_example 1)
 
 # Add the standard library to the build
-target_link_libraries(pico-pixels-example
+target_link_libraries(pico_pixels_example
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(pico-pixels-example PRIVATE
+target_include_directories(pico_pixels_example PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add pico_pixels
 add_subdirectory(.. pico_pixels)
-target_link_libraries(pico-pixels-example
+target_link_libraries(pico_pixels_example
         pico_pixels)
 
-pico_add_extra_outputs(pico-pixels-example)
+pico_add_extra_outputs(pico_pixels_example)
 
